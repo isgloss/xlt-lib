@@ -1,6 +1,6 @@
 {
   "name": "@yllo/xlt-lib",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "xlt lib",
   "main": "index.ts",
   "types": "index.d.ts",
