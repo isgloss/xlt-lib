@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   publish_to_npm:
-    runs-on: self-hosted
+    runs-on: Organization
     # needs: install-cache
     steps:
       - uses: actions/checkout@v2
