@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 jobs:
   publish to npm:
-    needs: install-cache
     runs-on: self-hosted
     # needs: install-cache
     steps:
