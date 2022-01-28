@@ -1,5 +1,1 @@
-import { xltLib } from "xltLib";
-
-module.exports = {
-  xltLib,
-};
+module.exports = require("./xlt/xltLib")

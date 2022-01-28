@@ -257,7 +257,7 @@ function generateKeys(version) {
 
   return generateFromEntropy(entropy, version, null);
 }
-export const xltLib = {
+module.exports = {
   restoreKeysFromSecret,
   signStr,
   generateKeys,
