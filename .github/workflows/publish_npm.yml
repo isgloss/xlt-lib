@@ -13,7 +13,9 @@ jobs:
           node-version: "12.x"
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
+        working-directory: package
       - name: NPM Upload
+        working-directory: package
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_KEY }}

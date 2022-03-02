@@ -248,7 +248,8 @@ function signStr(str, publicKey, privateKey) {
   return rsa.sign(str, "sha256");
 }
 
-function generateKeys(version) {
+function generateKeys() {
+  const version = 4
   var entropy = [];
 
   for (var i = 0; i < 16; i++) {
