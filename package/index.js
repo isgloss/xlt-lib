@@ -1,1 +1,6 @@
-export const xltLib = require("./xlt/xltLib");
+module.exports = {
+    xltLib: {
+        ...require('./xlt/xltLib'),
+        ...require('./xlt/connection'),
+    },
+}
