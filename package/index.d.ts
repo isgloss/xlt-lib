@@ -1,10 +1,10 @@
 import { IXLTTransaction, IXLTPublicTx, IXLTLibApi } from './xlt/xltModels'
 
-type TKeys = {
+export type TKeys = {
     secret?: string
     privateKey: string
     publicKey: string
-    version: string
+    version: number
     address: string
 }
 type xltLibT = {

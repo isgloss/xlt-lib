@@ -14,6 +14,14 @@ const createXltLibApi = (socket) => {
             delete resp.custom
             return resp
         },
+        initWallet: async (publicKey, version) => {
+            const resp = await asyncReq.asyncRequest('init_xlt_wallet', {
+                publicKey,
+                version,
+            })
+            delete resp.custom
+            return resp
+        },
         getBalance: async (address) => {
             const resp = await asyncReq.asyncRequest('get_balance', { address })
             delete resp.custom

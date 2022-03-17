@@ -23,5 +23,6 @@ export interface IXLTPublicTx {
 
 export interface IXLTLibApi {
     submitXltTransaction: (tx: IXLTTransaction) => Promise<TRespWrapper<{ txId: txId }>>
+    initWallet: (publicKey: string, version: number) => Promise<TRespWrapper<undefined>>
     getBalance: (address: string) => Promise<TRespWrapper<{ balance: number; address: string }>>
 }

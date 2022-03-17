@@ -40,9 +40,7 @@ function generateFromEntropy(entropy, version, testSecret) {
         obj.publicKey = rsa.n.toRadix(16)
         obj.privateKey = rsa.d.toRadix(16)
         obj.address = address
-        if (testSecret == null) {
-            obj.secret = secret
-        }
+        obj.secret = secret
         return obj
     }
 }
