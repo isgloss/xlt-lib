@@ -22,8 +22,9 @@ type xltLibT = {
     generateKeys: () => TKeys
     /**
      * Init node connection
+     * @param nodeUrl xlt network node url
      */
-    init: () => Promise<IXLTLibApi>
+    init: (nodeUrl: string) => Promise<IXLTLibApi>
     createXLTTransaction: (address: string, to_address: string, amount: number, comment?: string) => IXLTPublicTx
     signXLTTransaction: (tx: IXLTPublicTx, publicKey: string, privateKey: string) => IXLTTransaction
 }

@@ -17,7 +17,7 @@ const fetchAddressBalance = async (api: IXLTLibApi) => {
     expect(0).to.equal(txRes.result)
 }
 const init = async () => {
-    const xltApi = await xltLib.init()
+    const xltApi = await xltLib.init('http://localhost:3099/')
     sendSignedTx(xltApi)
     fetchAddressBalance(xltApi)
 }

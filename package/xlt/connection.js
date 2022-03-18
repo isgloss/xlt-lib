@@ -1,8 +1,6 @@
-const axios = require('axios').default
 const io = require('socket.io-client')
 const AsyncReq = require('./asyncReq')
-const isLocalApi = false
-const XLT_REST_URL = isLocalApi ? 'http://localhost:3099' : 'https://yllo.tech:--'
+
 const createXltLibApi = (socket) => {
     const asyncReq = AsyncReq.init(socket)
     socket.onAny((eventName, arg) => {
@@ -29,10 +27,9 @@ const createXltLibApi = (socket) => {
         },
     }
 }
-const init = () => {
+const init = (nodeUrl) => {
     return new Promise(async (resolve) => {
-        const socketServerUrl = (await axios.get(XLT_REST_URL + '/socketUrl/')).data
-        const socket = io(socketServerUrl, {
+        const socket = io(nodeUrl, {
             withCredentials: false,
         })
         socket.on('connect', () => {
